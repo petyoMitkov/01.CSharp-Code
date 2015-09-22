@@ -1,0 +1,45 @@
+using System;
+
+class FindTheGreatestNumber
+{
+    static void Main()
+    {
+        //07.Write a program that finds the greatest of given 5 variables.
+
+
+        Console.WriteLine("Please enter 5 numbers:");
+        decimal numFirst = decimal.Parse(Console.ReadLine());
+        decimal numSeconsd = decimal.Parse(Console.ReadLine());
+        decimal numThird = decimal.Parse(Console.ReadLine());
+        decimal numFourth = decimal.Parse(Console.ReadLine());
+        decimal numFifth = decimal.Parse(Console.ReadLine());
+
+        decimal maxNum = decimal.MinValue;
+
+        if (maxNum < numFirst)
+        {
+            maxNum = numFirst;
+        }
+        if (maxNum < numSeconsd)
+        {
+            maxNum = numSeconsd;
+        }
+        if (maxNum < numThird)
+        {
+            maxNum = numThird;
+        }
+        if (maxNum < numFourth)
+        {
+            maxNum = numFourth;
+        }
+        if (maxNum < numFifth)
+        {
+            maxNum = numFifth;
+        }
+
+        Console.WriteLine("The greatest number is {0}", maxNum);
+
+        
+    }
+}
+
