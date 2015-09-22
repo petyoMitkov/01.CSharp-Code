@@ -1,0 +1,70 @@
+using System;
+
+class SortDescending
+{
+    static void Main()
+    {
+        //04.Sort 3 real values in descending order using nested if statements.
+
+
+        Console.WriteLine("Enter three numbers: ");
+        int firsteNum = int.Parse(Console.ReadLine());
+        int secondNum = int.Parse(Console.ReadLine());
+        int thirdNum = int.Parse(Console.ReadLine());
+
+        int theBigestNum = 0;
+        int biggerNum = 0;
+        int smollNum = 0;
+
+        if ((firsteNum > secondNum) && (firsteNum > thirdNum))
+        {
+            theBigestNum = firsteNum;
+            if (secondNum > thirdNum)
+            {
+                biggerNum = secondNum;
+                smollNum = thirdNum;
+            }
+            else
+            {
+                biggerNum = thirdNum;
+                smollNum = secondNum;
+            }
+        }
+        if ((secondNum > firsteNum) && (secondNum > thirdNum))
+        {
+            theBigestNum = secondNum;
+            if (firsteNum > thirdNum)
+            {
+                biggerNum = firsteNum;
+                smollNum = thirdNum;
+            }
+            else
+            {
+                biggerNum = thirdNum;
+                smollNum = firsteNum;
+            }
+        }
+        if ((thirdNum > firsteNum) && (thirdNum > secondNum))
+        {
+            theBigestNum = thirdNum;
+            if (firsteNum > secondNum)
+            {
+                biggerNum = firsteNum;
+                smollNum = secondNum;
+            }
+            else
+            {
+                biggerNum = secondNum;
+                smollNum = firsteNum;
+            }
+        }
+        Console.WriteLine("{0}  {1}  {2}", theBigestNum, biggerNum, smollNum);
+      
+       
+
+
+
+
+    }
+}
+
