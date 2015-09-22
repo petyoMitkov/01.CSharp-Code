@@ -1,0 +1,53 @@
+using System;
+
+class RealRoots
+{
+    static void Main()
+    {
+        //06.Write a program that enters the coefficients a, b and c of a quadratic equation
+        //  a*x2 + b*x + c = 0	and calculates and prints its real roots.
+        //  Note that quadratic equations may have 0, 1 or 2 real roots.
+
+        Console.Write("a = ");
+        double a = double.Parse(Console.ReadLine());
+        Console.Write("b = ", 10);
+        double b = double.Parse(Console.ReadLine());
+        Console.Write("c = ");
+        double c = double.Parse(Console.ReadLine());
+
+        bool flag = a != 0;
+
+        if (flag)
+        {
+            double D = b * b - 4 * a * c;
+            Console.WriteLine("D = {0}", D);
+            double x1 = 0;
+            double x2 = 0;
+            flag = D >= 0;
+
+            if (!flag)
+            {
+                Console.WriteLine("The real roots is 0");
+            }
+            flag = D != 0;
+            if (!flag)
+            {
+                double rootOne = -b / (2 * a);
+                Console.WriteLine("Real root is {0}", rootOne);
+            }
+            flag = D <= 0;
+            if (!flag)
+            {
+                x1 = (-b + Math.Sqrt(D)) / (2 * a);
+                x2 = (-b - Math.Sqrt(D)) / (2 * a);
+                Console.WriteLine("Two real roots \nX1 = {0}     X2 = {1}", x1, x2);
+            }
+        }
+        else
+        {
+            Console.WriteLine("Error a == 0");
+        }
+        
+    }
+}
+
