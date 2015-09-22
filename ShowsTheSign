@@ -1,0 +1,69 @@
+using System;
+
+class ShowsTheSign
+{
+    static void Main()
+    {
+        //02.Write a program that shows the sign (+ or -) 
+        //  of the product of three real numbers without calculating it.
+        //  Use a sequence of if statements.
+            
+        Console.WriteLine("Enter three numbers: ");
+
+        int firstNum = int.Parse(Console.ReadLine());
+        int secondNum = int.Parse(Console.ReadLine());
+        int thirdNum = int.Parse(Console.ReadLine());
+
+        int counterSingNegative = 0;
+            
+        if (firstNum < 0)
+        {
+            counterSingNegative++;
+        }
+        else if (firstNum == 0)
+        {
+            Console.WriteLine("The resoult is 0");
+            counterSingNegative = -10;
+        }
+        if (secondNum < 0)
+        {
+            counterSingNegative++;
+        }
+        else if (secondNum == 0)
+        {
+            Console.WriteLine("The result is 0");
+            counterSingNegative = -10;
+        }
+        if (thirdNum < 0)
+        {
+            counterSingNegative++;   
+        }
+        else if (thirdNum == 0)
+        {
+            Console.WriteLine("The result is 0");
+            counterSingNegative = -10;
+        }            
+
+
+        if (counterSingNegative == 0)
+        {
+            Console.WriteLine("The sing is \"+\"");
+        }
+        if (counterSingNegative == 1)
+        {
+            Console.WriteLine("The sing is \"-\"");
+        }
+        if (counterSingNegative == 2)
+        {
+            Console.WriteLine("The sing is \"+\"");
+        }
+        if (counterSingNegative == 3)
+        {
+            Console.WriteLine("The sing is \"-\"");
+        }        
+
+
+
+    }
+}
+
