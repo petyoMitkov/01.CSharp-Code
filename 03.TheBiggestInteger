@@ -1,0 +1,43 @@
+using System;
+
+class TheBiggestInteger
+{
+    static void Main()
+    {
+        //03.Write a program that finds the biggest of three integers
+        //  using nested if statements.
+
+
+        Console.WriteLine("Enter three numbers:");
+        int numOne = int.Parse(Console.ReadLine());
+        int numTwo = int.Parse(Console.ReadLine());
+        int numThree = int.Parse(Console.ReadLine());
+
+        int saveBiggerNum = 0;
+
+        if (numOne > numTwo)
+        {
+            if (numOne > numThree)
+            {
+                saveBiggerNum = numOne;
+            }
+        }
+        if (numTwo > numOne)
+        {
+            if (numTwo > numThree)
+            {
+                saveBiggerNum = numTwo;
+            }
+        }
+        if (numThree > numOne)
+        {
+            if (numThree > numTwo)
+            {
+                saveBiggerNum = numThree;
+            }
+        }
+        Console.WriteLine(saveBiggerNum);      
+
+
+    }
+}
