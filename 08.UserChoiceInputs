@@ -1,0 +1,47 @@
+using System;
+
+class UserChoiceInputs
+{
+    static void Main()
+    {
+        //08.Write a program that, depending on the user's choice inputs int, double or string variable.
+        //  If the variable is integer or double, increases it with 1.
+        //  If the variable is string, appends "*" at its end. 
+        //  The program must show the value of that variable as a console output.
+        //  Use switch statement.
+
+
+        Console.WriteLine("Please choice input type.");
+        Console.WriteLine("For int press 1, for double press 2, for string press 3.");
+
+        int input = int.Parse(Console.ReadLine());
+
+        switch (input)
+        {
+            case 1:
+                Console.WriteLine("Put intiger");
+                int inputInt = int.Parse(Console.ReadLine());
+                inputInt++;
+                Console.WriteLine(inputInt);
+                break;
+            case 2:
+                Console.WriteLine("Put double");
+                double inputDouble = double.Parse(Console.ReadLine());
+                inputDouble++;
+                Console.WriteLine(inputDouble);
+                break;
+            case 3:
+                Console.WriteLine("Put string");
+                string inputString = Console.ReadLine();
+                inputString = inputString + "*"  ;
+                Console.WriteLine(inputString);
+                break;
+            default:
+                Console.WriteLine("Wrong choice, try again !!!");
+                break;
+        }
+              
+        
+
+    }
+}
