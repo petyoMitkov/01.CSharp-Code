@@ -1,0 +1,139 @@
+using System;
+
+class ChecksZeroSum
+{
+    static void Main()
+    {
+        //09.We are given 5 integer numbers. Write a program that checks if
+        //  the sum of some subset of them is 0. Example: 3, -2, 1, 1, 8  1+1-2=0.
+
+
+        Console.WriteLine("Put five integer numbers:");
+        int numOne = int.Parse(Console.ReadLine());
+        int numTwo = int.Parse(Console.ReadLine());
+        int numThree = int.Parse(Console.ReadLine());
+        int numFour = int.Parse(Console.ReadLine());
+        int numFive = int.Parse(Console.ReadLine());
+       
+
+        // 5 digits =====================================================
+
+        if (numOne + numTwo + numThree + numFour + numFive == 0)
+        {
+            Console.WriteLine("{0} {1} {2} {3} {4} = 0",numOne, numTwo, numThree, numFour, numFive );
+        }
+
+        // 4 digits =====================================================
+
+        if (numOne + numTwo + numThree + numFour == 0)
+        {
+            Console.WriteLine("{0} {1} {2} {3} = 0", numOne, numTwo, numThree, numFour);
+        }
+        if (numOne + numTwo + numThree + numFive == 0)
+        {
+            Console.WriteLine("{0} {1} {2} {3} = 0", numOne, numTwo, numThree, numFive);
+        }
+        if (numOne + numThree + numFour + numFive == 0)
+        {
+            Console.WriteLine("{0} {1} {2} {3} = 0", numOne, numThree, numFour, numFive);
+        }
+        if (numTwo + numThree + numFour + numFive == 0)
+        {
+            Console.WriteLine("{0} {1} {2} {3} = 0", numTwo, numThree, numFour, numFive);
+        }
+        if (numOne + numTwo + numFour + numFive == 0)
+        {
+            Console.WriteLine("{0} {1} {2} {3} = 0", numOne, numTwo, numFour, numFive);
+        }
+
+        // 3 digits =====================================================
+
+        if (numOne + numTwo + numThree == 0)
+        {
+            Console.WriteLine("{0} {1} {2} = 0", numOne, numTwo, numThree);
+        }
+        if (numOne + numTwo + numFour == 0)
+        {
+            Console.WriteLine("{0} {1} {2} = 0", numOne, numTwo, numFour);
+        }
+        if (numOne + numTwo + numFive == 0)
+        {
+            Console.WriteLine("{0} {1} {2} = 0", numOne, numTwo, numFive);
+        }
+        if (numOne + numThree + numFour == 0)
+        {
+            Console.WriteLine("{0} {1} {2} = 0", numOne, numThree, numFour);
+        }
+        if (numOne + numThree + numFive == 0) 
+        {
+            Console.WriteLine("{0} {1} {2} = 0", numOne, numThree, numFive);
+        }
+        if (numOne + numFour + numFive == 0)
+        {
+            Console.WriteLine("{0} {1} {2} = 0", numOne, numFour, numFive);
+        }
+        if (numTwo + numThree + numFour == 0)
+        {
+            Console.WriteLine("{0} {1} {2} = 0", numTwo, numThree, numFour);
+        }
+        if (numTwo + numThree + numFive == 0)
+        {
+            Console.WriteLine("{0} {1} {2} = 0", numTwo, numThree, numFive);
+        }
+        if (numTwo + numFour + numFive == 0)
+        {
+            Console.WriteLine("{0} {1} {2} = 0", numTwo, numFour, numFive);
+        }
+        if (numThree + numFour + numFive == 0)
+        {
+            Console.WriteLine("{0} {1} {2} = 0", numThree, numFour, numFive);
+        }
+
+        // 2 digits =====================================================
+
+        if (numOne + numTwo == 0)
+        {
+            Console.WriteLine("{0} {1}  = 0", numOne, numTwo);
+        }
+        if (numOne + numThree == 0)
+        {
+            Console.WriteLine("{0} {1}  = 0", numOne, numThree);
+        }
+        if (numOne + numFour == 0)
+        {
+            Console.WriteLine("{0} {1}  = 0", numOne, numFour);
+        }
+        if (numOne + numFive == 0)
+        {
+            Console.WriteLine("{0} {1}  = 0", numOne, numFive);
+        }
+        if (numTwo + numThree == 0)
+        {
+            Console.WriteLine("{0} {1}  = 0", numTwo, numThree);
+        }
+        if (numTwo + numFour == 0)
+        {
+            Console.WriteLine("{0} {1}  = 0", numTwo, numFour);
+        }
+        if (numTwo + numFive == 0)
+        {
+            Console.WriteLine("{0} {1}  = 0", numTwo, numFive);
+        }
+        if (numThree + numFour == 0)
+        {
+            Console.WriteLine("{0} {1}  = 0", numThree, numFour);
+        }
+        if (numThree + numFive == 0)
+        {
+            Console.WriteLine("{0} {1}  = 0", numThree, numFive);
+        }
+        if (numFour + numFive == 0)
+        {
+            Console.WriteLine("{0} {1}  = 0", numFour, numFive);
+        }
+    
+        
+
+    }
+}
+
