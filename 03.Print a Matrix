@@ -1,0 +1,43 @@
+using System;
+
+class OutputsAMatrix
+{
+    static void Main()
+    {
+        //12.Write a program that reads from the console a positive integer number N (N < 20)
+        //and outputs a matrix like the following:
+        //            N = 3			   N = 4
+        //          1   2   3         1  2  3  4
+        //          2   3   4         2  3  4  5 
+        //          3   4   5         3  4  5  6
+        //                            4  5  6  7
+
+        Console.WriteLine("Print a matrix");
+        Console.Write("N = ");
+        int numN = int.Parse(Console.ReadLine());
+        int row, col;
+
+        if ((numN < 20) && (numN > 1))
+        {
+            for (row = 1; row <= numN; row++)
+            {
+                int counter = 1;
+                Console.Write("{0,3}",row);
+
+                for (col = row + 1; counter < numN; col++)
+                {
+                    Console.Write("{0,3}",col);
+                    counter++;
+                }
+                Console.WriteLine();
+            }
+        }
+        else
+        {
+            Console.WriteLine("N must be bitwin 1 and 19 ");            
+        }
+
+
+    }
+}
+
