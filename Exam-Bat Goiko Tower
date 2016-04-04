@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BatGoikoTower
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int H = int.Parse(Console.ReadLine());
+            int lenth = H;
+            int coun = 1;
+            int row = 2;
+            int step = 1;
+            for (int i = 0; i < lenth ; i++)
+            {
+                Console.Write(new string('.',(H-1) - i));
+                Console.Write('/');
+                if (i >= 0)
+                {
+                    if (coun == row)
+                    {
+                        Console.Write(new string('-', i * 2));
+                        step++;
+                        row = row + step;
+                    }
+                    else
+                    {
+                        Console.Write(new string('.',i * 2));
+                    }
+                    coun++;
+
+
+                    Console.Write('\\');
+                    
+                }
+                Console.Write(new string('.', (H- 1) - i));
+                Console.WriteLine();
+            }
+
+
+
+
+
+        }
+    }
+}

@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _01.BabaTincheAirlines
+{
+    class BabaTincheAirlines
+    {
+        static void Main(string[] args)
+        {
+            string[] firstLine = Console.ReadLine().Split();
+            string[] secondLine = Console.ReadLine().Split();
+            string[] thirdLine = Console.ReadLine().Split();
+
+            //firstLine 12p * 7000,off 70%, 0.5%
+            int firstLineIncome = (Convert.ToInt32(firstLine[0]) - Convert.ToInt32(firstLine[1])) * 7000;
+            firstLineIncome += (int)(Convert.ToInt32(firstLine[1]) * (7000 * 0.3));
+            firstLineIncome += (int)(Convert.ToInt32(firstLine[2]) * (7000 * 0.005));
+         
+            //secondLine 28p * 3500, off 70%, 0.5%
+            int secondLineInkome = (Convert.ToInt32(secondLine[0]) - Convert.ToInt32(secondLine[1])) * 3500;
+            secondLineInkome += (int)(Convert.ToInt32(secondLine[1]) * (3500 * 0.3));
+            secondLineInkome += (int)(Convert.ToInt32(secondLine[2]) * (3500 * 0.005));
+                       
+            //thirdLine 50 * 1000, off 70%, 0.5%
+            int thirdLineIncom = (Convert.ToInt32(thirdLine[0]) - Convert.ToInt32(thirdLine[1])) * 1000;
+            thirdLineIncom += (int)(Convert.ToInt32(thirdLine[1]) * (1000 * 0.3));
+            thirdLineIncom += (int)(Convert.ToInt32(thirdLine[2]) * (1000 * 0.005));           
+
+            //total 
+            int totalIncome = firstLineIncome + secondLineInkome + thirdLineIncom;
+            int maxIncom = (int)(12 * 7000 + 12 * (7000 * 0.005))
+                        + (int)(28 * 3500 + 28 * (3500 * 0.005))
+                        + (int)(50 * 1000 + 50 * (1000 * 0.005));
+            //OUTPUT
+
+            Console.WriteLine(totalIncome);
+            Console.WriteLine(maxIncom - totalIncome);
+ 
+
+        }
+    }
+}

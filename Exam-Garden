@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GarthenThird
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            decimal[] inputSeeds = new decimal[6];
+            decimal[] inputArea = new decimal[5];
+
+            for (int i = 0; i < inputSeeds.Length; i++)
+            {
+                inputSeeds[i] = decimal.Parse(Console.ReadLine());
+
+                if (i < inputArea.Length)
+                {
+                    inputArea[i] = decimal.Parse(Console.ReadLine());
+                }                  	                                                   
+            }
+
+            decimal[] price = { 0.5m, 0.4m, 0.25m, 0.6m, 0.3m, 0.4m };
+            for (int j = 0; j < inputSeeds.Length; j++)
+            {
+                inputSeeds[j] = inputSeeds[j] * price[j];
+            }
+
+            decimal totalCosts = 0;
+            for (int k = 0; k < inputSeeds.Length; k++)
+            {
+                totalCosts += inputSeeds[k];
+            }
+            Console.WriteLine("Total costs: {0:0.00}",totalCosts);
+
+            decimal sumInputArea = 0;
+            for (int p = 0; p < inputArea.Length; p++)
+            {
+                sumInputArea += inputArea[p];
+            }
+
+            decimal ourArea = 250;
+            if (ourArea > sumInputArea)
+            {
+                Console.WriteLine("Beans area: {0:0}", ourArea - sumInputArea);
+            }
+            else if (ourArea < sumInputArea)
+            {
+                Console.WriteLine("Insufficient area");
+            }
+            else if (ourArea == sumInputArea)
+            {
+                Console.WriteLine("No area for beans");
+            }
+                                 
+
+
+        }
+    }
+}
