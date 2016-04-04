@@ -1,0 +1,25 @@
+class DeckOfCards
+{
+    static void Main()
+    {
+        //11.Write a program that prints all possible cards from a standard deck of 52 cards 
+        //(without jokers). The cards should be printed with their English names.
+        //Use nested for loops and switch-case.
+        //clubs (♣), diamonds (♦), hearts (♥) and spades (♠)
+
+        object[] arrTypeCard = { 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A" };
+
+        string[] arrColorCard = { "clubs (♣)", "diamonds (♦)", "hearts (♥)", "spades (♠)" };
+        int counter = 1;
+
+        for (int i = 0; i < arrColorCard.Length ; i++)
+        {
+            for (int k = 0; k < arrTypeCard.Length ; k++)
+            {
+                Console.WriteLine("{2,2} = {0,2} {1,9}",arrTypeCard[k],arrColorCard[i], counter);
+                counter++;
+            }            
+        }
+
+    }
+}
